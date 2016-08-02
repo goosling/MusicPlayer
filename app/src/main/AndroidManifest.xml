@@ -7,6 +7,28 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" ></application>
+        android:theme="@style/AppTheme" >
+
+        <activity android:name=".activities.MainActivity"
+            android:theme="@style/AppTheme.Main">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".activities.DetailActivity"
+            android:theme="@style/AppTheme.Detail"></activity>
+
+        <activity android:name=".activities.PlayerActivity"></activity>
+
+        <service
+            android:name=".music.PlayerService"
+            android:enabled="true"
+            android:exported="false" />
+
+    </application>
 
 </manifest>
